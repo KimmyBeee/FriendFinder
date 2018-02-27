@@ -49,4 +49,17 @@ var friendBank = [
 		photo_src: "../images/emmaWatson.jpg",
 		scores: [4, 1, 2, 4, 1, 3, 2, 2, 3, 4]
 	}
-]
+];
+
+module.exports = {currentUser: currentUser, friendBank: friendBank};
+
+var userOne = currentUser;
+
+function userScore()	{
+	$()
+}
+
+
+function friendScore()	{
+
+}

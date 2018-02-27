@@ -8,10 +8,14 @@ module.exports = function(app)	{
 	});
 
 	app.post("/api/friends", function(req, res)	{
+		var foundFriend = false;
 		for (i = 0; i < friendBank.length; i++)	{
-			if (currentUser != friendBank[i])	{
-				friendBank.push(currentUser);
+			if (currentUser = friendBank[i])	{
+				foundFriend = true;
 			}
+		}
+		if (!foundFriend)	{
+			friendBank.push(currentUser);
 		}
 	});
 }

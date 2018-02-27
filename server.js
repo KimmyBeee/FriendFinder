@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 
 //Router
 //================================================================
-require("/app/routing/htmlRoutes")(app);
-require("/app/routing/apiRoutes")(app);
+require("app/routing/htmlRoutes")(app);
+require("app/routing/apiRoutes")(app);
 
 
 //Listener
