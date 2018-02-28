@@ -51,15 +51,9 @@ var friendBank = [
 	}
 ];
 
-module.exports = {currentUser: currentUser, friendBank: friendBank};
-
-var userOne = currentUser;
-
-function userScore()	{
-	$()
-}
+module.exports = {
+	currentUser: currentUser, 
+	friendBank: friendBank
+};
 
 
-function friendScore()	{
-
-}

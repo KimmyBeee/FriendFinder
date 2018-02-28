@@ -1,21 +1,35 @@
-//Routes to arrays that hold the current user data and possible friends data
-var currentUser = require("../data/friends");
-var friendBank = require("../data/friends");
+//Route to the array that holds the data for all possible friends.
+console.log("apiRoutes is loaded");
+var people = require("../data/friends");
+
 
 module.exports = function(app)	{
+
 	app.get("/api/friends", function(req, res)	{
-		res.json(friendData);
-	});
+		res.json(people);
+	});	
 
 	app.post("/api/friends", function(req, res)	{
 		var foundFriend = false;
-		for (i = 0; i < friendBank.length; i++)	{
-			if (currentUser = friendBank[i])	{
+		for (i = 0; i < people.friendBank.length; i++){
+			if (people.currentUser = people.friendBank[i])	{
 				foundFriend = true;
 			}
 		}
 		if (!foundFriend)	{
-			friendBank.push(currentUser);
+			people.friendBank.push(people.currentUser[0]);
+			res.json(people.friendBank);
+			console.log(people.friendBank);
 		}
-	});
+	})	
+
+	app.post("/api/clear", function(req, res) {
+    // Empty out the arrays of data
+    people.currentUser = [];
+    people.friendBank = [];
+
+    console.log(people);
+  });
+	//app.post("")
+	
 }
